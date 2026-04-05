@@ -22,5 +22,8 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
+import healthCheckRouter from "./routes/healthCheck.router.js";
+
+app.use("/healthcheck", healthCheckRouter);
 
 export default app;
