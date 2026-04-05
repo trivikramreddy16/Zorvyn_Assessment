@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-import healthCheckRouter from "./routes/healthCheck.router.js";
+import healthCheckRouter from "./routes/healthCheck.routes.js";
 
 app.use("/healthcheck", healthCheckRouter);
 
