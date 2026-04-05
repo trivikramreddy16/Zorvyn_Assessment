@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-
+import { errorHandler } from "./middlewares/error.middleware.js";
 const app = express();
 
 app.use(express.json());
@@ -25,5 +25,6 @@ app.get("/", (req, res) => {
 import healthCheckRouter from "./routes/healthCheck.routes.js";
 
 app.use("/healthcheck", healthCheckRouter);
+app.use(errorHandler);
 
 export default app;
